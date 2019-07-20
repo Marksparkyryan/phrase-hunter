@@ -10,7 +10,7 @@ from phrasehunter.game import Game
 
 PHRASES = [
     "winter is coming",
-    "one small step for man",
+    "one small step for man, one giant leap for mankind",
     "a diamond in the rough",
     "a house divided against itself cannot stand",
     "back to basics",

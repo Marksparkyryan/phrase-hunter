@@ -1,6 +1,6 @@
 import random
 
-from phrasehunter.character import Character
+from .character import Character
 
 class Phrase:
     def __init__(self, phrase):
@@ -8,8 +8,13 @@ class Phrase:
         self.phrase_guessed = False     
     
     def char_in_phrase_guessed(self, guess):
+        char_guessed = False
         for char in self.char_in_phrase_list:
-            char.update_char_guessed(guess)
+            if not char.char_guessed:
+                char.update_char_guessed(guess)
+                if char.char_guessed:
+                    char_guessed = True
+        return char_guessed
 
     def update_phrase_guessed(self):
         count = len(self.char_in_phrase_list)
@@ -25,8 +30,7 @@ class Phrase:
             phrase.append(Character.show_character(char))
         return "".join(phrase)
     
-    def __str__(self):
-        pass
+
 
 
 
