@@ -2,6 +2,7 @@ import random
 
 from .character import Character
 
+
 class Phrase:
     def __init__(self, phrase):
         self.char_in_phrase_list = phrase
@@ -28,7 +29,10 @@ class Phrase:
         phrase = []
         for char in self.char_in_phrase_list:
             phrase.append(Character.show_character(char))
-        return "".join(phrase)
+        string_phrase = "".join(phrase)
+        return string_phrase.capitalize()
+
+
     
 
 
