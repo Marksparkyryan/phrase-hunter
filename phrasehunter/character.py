@@ -31,20 +31,3 @@ class Character:
             return self.original
         else:
             return "_"
-
-
-
-      
-
-
-
-                
-    
-
-
-
-
-
-    
-    
-

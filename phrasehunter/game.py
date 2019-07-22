@@ -76,26 +76,3 @@ class Game:
                 break
         print("Game over! You've run out of lives.", "\n")
             
-            
-            
-            
-            
-
-
-            
-            
-
-
-
-
-
-
-
-
-    
-
-
-            
-
-
-

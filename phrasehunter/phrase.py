@@ -46,32 +46,3 @@ class Phrase:
             phrase.append(Character.show_character(char))
         string_phrase = "".join(phrase)
         return string_phrase.capitalize()
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-    
-
-
-
-        
-
-
-
-
-        
-    
-
-
-
-    
