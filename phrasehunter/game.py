@@ -7,7 +7,12 @@ from .character import Character
 
 
 class Game:
-
+    """Game class will choose a random phrase from passed in phrases, 
+    initialize user lives, and track previously guessed characters, 
+    validate user guesses, and hold game loop logic. Game class will also 
+    iterate over random phrase and turn each character into Chracter 
+    object. Game class will check
+    """
     def __init__(self, phrases):
         self.phrases = phrases
         self.current_phrase = random.choice(phrases)
@@ -15,6 +20,9 @@ class Game:
         self.already_guessed = []
 
     def create_char_objects(self):
+        """Iterate over random phrase and turn each character into a 
+        Chracter object then store objects as colection.
+        """
         char_in_phrase_list = []
         for char in self.current_phrase:
             char_instance = Character(char)
@@ -23,6 +31,8 @@ class Game:
         return char_in_phrase_list
     
     def check_guess(self, phrase):
+        """Validate user guesses by allowing only single letters a-z.
+        """
         os.system("cls" if os.name == "nt" else "clear")
         while True:
             try:
@@ -48,6 +58,11 @@ class Game:
 
 
     def start_game(self):
+        """Call on the creation of Character objects for each character 
+        in phrase, then initialize a phrase object from a collection of 
+        those Character objects, then prompt users for guesses while 
+        lives are greater than 0.
+        """
         phrase = Phrase(self.create_char_objects())
         
         while self.lives:
