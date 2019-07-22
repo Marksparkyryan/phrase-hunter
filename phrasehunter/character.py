@@ -1,7 +1,5 @@
-# Create your Character class logic in here.
 
 class Character:
-    # help Phrase determine how individual character should display itself
 
     def __init__(self, char):
         self.original = char

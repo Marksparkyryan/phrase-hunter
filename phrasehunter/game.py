@@ -29,19 +29,17 @@ class Game:
                 print(f"You have {self.lives} lives remaining.")
                 print("")
                 print(Phrase.show_phrase(phrase))
-                guess = str(input("Guess a letter! > ")).lower()
+                guess = str(input("Guess a letter [or 0 to quit]! > ")).lower()
                 os.system("cls" if os.name == "nt" else "clear")
                 if guess == "0":
                     print("Thanks for playing!", "\n")
                     exit()
                 if re.match(r"^$", guess):
-                    raise ValueError(f""""blank space" is not a valid 
-                    letter!""")
+                    raise ValueError(f""""blank space" is not a valid letter!""")
                 if re.match("^[a-z]$", guess) == None:
                     raise ValueError(f""""{guess}" is not a valid letter!""")
                 if guess in self.already_guessed:
-                    raise ValueError(f"""You've already guessed the letter 
-                    "{guess}"!""")
+                    raise ValueError(f"""You've already guessed the letter "{guess}"!""")
             except ValueError as err:
                 print(err)
             else:
@@ -61,6 +59,7 @@ class Game:
             if phrase.phrase_guessed:
                 print(f"{phrase.show_phrase()}! You guessed it!", "\n")
                 break
+        print("Game over! You've run out of lives.", "\n")
             
             
             

@@ -1,3 +1,5 @@
+import os
+
 from phrasehunter.game import Game
 
 PHRASES = [
@@ -14,9 +16,12 @@ if __name__ == "__main__":
     while True:
         game = Game(PHRASES)
         game.start_game()
-        again = input("Play again? y/n")
+        again = input("Play again? [y/n] ")
         if again == "n":
-            break
+            os.system("cls" if os.name == "nt" else "clear")
+            print("Thanks for playing!", "\n")
+            exit()
+            
 
 
 
