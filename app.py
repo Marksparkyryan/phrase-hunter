@@ -10,6 +10,13 @@ PHRASES = [
     "all is fair in love and war",
     "better late than never",
     "home is where the heart is",
+    "a bird in the hand is worth two in the bush",
+    "a dime a dozen",
+    "piece of cake",
+    "burst your bubble",
+    "close but no cigar",
+    "birds of a feather flock together",
+    "practice makes perfect",
 ]
 
 if __name__ == "__main__":
