@@ -1,3 +1,6 @@
+import os
+import re
+import time
 
 class Character:
     """Character class will receive one character, initialize an instance based on 
@@ -31,3 +34,23 @@ class Character:
             return self.original
         else:
             return "_"
+    
+    @classmethod
+    def create_character(cls, char):
+        """Classmethod will validate passed in character (only letters 
+        a-z and spaces are permitted). If valid, character is instantiated.
+        """
+        try:
+            if re.match("^[a-z ]$", char) == None:
+                raise ValueError("Character Error: Only letters a-z and "
+                "spaces are permitted in phrase.")
+        except ValueError as err:
+                print(err)
+                time.sleep(2)
+                return False
+        else:
+            return cls(char)
+
+
+
+

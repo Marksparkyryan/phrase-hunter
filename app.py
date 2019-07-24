@@ -3,20 +3,20 @@ import os
 from phrasehunter.game import Game
 
 PHRASES = [
-    "winter is coming",
+    "1winter is coming",
     "a diamond in the rough",
     "a house divided against itself cannot stand",
     "back to basics",
-    "all is fair in love and war",
-    "better late than never",
-    "home is where the heart is",
+    "1all is fair in love and war",
+    "1better late than never",
+    "1home is where the heart is",
     "a bird in the hand is worth two in the bush",
     "a dime a dozen",
     "piece of cake",
-    "burst your bubble",
-    "close but no cigar",
-    "birds of a feather flock together",
-    "practice makes perfect",
+    "1burst your bubble",
+    "1close but no cigar",
+    "1birds of a feather flock together",
+    "1practice makes perfect",
 ]
 
 if __name__ == "__main__":
