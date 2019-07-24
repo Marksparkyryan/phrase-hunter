@@ -50,7 +50,3 @@ class Character:
                 return False
         else:
             return cls(char)
-
-
-
-
